@@ -107,10 +107,10 @@ export const loginUser = asyncHandler(async (req, res) => {
 
 export const logoutUser = asyncHandler(async (req, res) => {
 
-    res.clearCookie("jwt", "", {
+    res.clearCookie("jwt", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: "strict"
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     });
 
     res.status(httpStatus.OK).json({
