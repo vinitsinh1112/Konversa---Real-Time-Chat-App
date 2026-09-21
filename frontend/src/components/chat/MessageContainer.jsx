@@ -164,7 +164,7 @@ const MessageContainer = () => {
 
                                 <div
                                     className={`group relative px-3 py-1 max-w-[75%] md:max-w-[65%] lg:max-w-[55%] ${isMe
-                                        ? 'bg-blue-900 rounded-lg rounded-tr-none'
+                                        ? 'bg-blue-800 rounded-lg rounded-tr-none'
                                         : 'bg-zinc-800 rounded-lg rounded-tl-none'
                                         }`}
                                     onTouchStart={() => {
